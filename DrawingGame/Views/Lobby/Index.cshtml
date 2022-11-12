@@ -107,7 +107,7 @@
         });
         c.addEventListener("mousemove", function (evt) {
 
-            if (evt.buttons == 1) { //drzim tlacitko mysi
+            if (evt.buttons == 1) { 
                 ctx.beginPath();
                 ctx.moveTo(lastX, lastY);
                 ctx.lineTo(evt.layerX, evt.layerY);
@@ -118,9 +118,6 @@
             lastX = evt.layerX;
             lastY = evt.layerY;
             //debugger;
-            //zjistit je stisknuto tlacitko
-              //nakresli caru od pozice stisku
-              //odesli data
         });
         c.addEventListener("mouseup", function (evt) {
             connection.invoke("sendLines", lines);
